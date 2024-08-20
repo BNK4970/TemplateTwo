@@ -12,7 +12,9 @@ module.exports = {
     },
     colors: {
       foreground : "rgb(var(--color-foreground))",
-      background : "rgb(var(--color-background))",      
+      background : "rgb(var(--color-background))",    
+      
+      line : "rgb(var(--color-line))",
   
       primary : "rgb(var(--color-primary))",
       secondary : "rgb(var(--color-secondary))",

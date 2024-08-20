@@ -5,7 +5,7 @@ import React from 'react';
 export default function Button({ session }: any) {
 	return (
 		<div>
-			{session == null ? (
+			{!session == null ? (
 				<button onClick={() => signIn()}>Sign in</button>
 			) : (
 				<button onClick={() => signOut()}>Sign out</button>

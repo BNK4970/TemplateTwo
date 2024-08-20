@@ -12,12 +12,12 @@ export default async function AuthLayout({
   }) {
     const session = await getServerSession(authOptions);
     if (!session) {
-      return redirect('/register');
+      return redirect('/');
     } else {
       return (
         <html>
          <body>
-          <NavBar title={APP.title} naviagationList={NAVIGATION_BAR_ADMIN.map(name=>name.label)}/>
+          <NavBar title={APP.title}/>
          <section className="w-full h-section grid place-items-center">
            {children}
          </section>
