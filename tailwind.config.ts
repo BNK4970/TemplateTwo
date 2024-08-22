@@ -8,7 +8,8 @@ module.exports = {
   ],
   theme: {
     height: {
-      section: "calc(100vh - 59px)"
+      section: "calc(100vh - 59px)",
+      dashboard: "calc(100vh - 64px)",
     },
     colors: {
       foreground : "rgb(var(--color-foreground))",

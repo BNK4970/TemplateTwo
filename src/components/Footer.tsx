@@ -41,14 +41,15 @@ interface Props {}
 // Composant Footer principal
 export const Footer: React.FC<Props> = () => {
   return (
-    <footer className="bg-black row-start-2 row-end-2 border-t border-1 border-[#202020] h-fit py-8 px-[10%] w-full flex flex-col gap-6">
-      <section className="flex items-center justify-between p-8 bg-primary rounded-lg mobileL:flex-col">
+    <footer className="bg-black row-start-2 row-end-2 border-t border-1 border-line h-fit py-8 px-[10%] w-full flex flex-col gap-6">
+      {/* Newsletter */}
+      <section className="flex items-center justify-between p-8 rounded-lg mobileL:flex-col border border-line bg-primary">
         <h1 className="font-bold text-3xl">Subscribe to our Newsletter</h1>
         <form className="h-fit grid grid-cols-[auto_auto] items-center justify-stretch gap-4">
           <Input id="newsLetter" name="email" type="email">
             Enter
           </Input>
-          <Button variant="solid" color="primary">
+          <Button variant="bordered" color="secondary" radius="md" addClassName="hover:bg-[rgb(var(--color-secondary),0.2)]">
             Submit
           </Button>
         </form>

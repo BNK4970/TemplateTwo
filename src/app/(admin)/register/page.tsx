@@ -100,8 +100,8 @@ export const SignInPage = () => {
 
   
   return (
-    <div className="p-8 place-self-center max-h-screen grid gap-6 outline outline-1 outline-[#151515] rounded-lg w-[25%] h-[80%] grid-rows-[1fr_auto_auto_1fr]">
-      <div className="flex flex-col gap-2">
+    <div className="p-8 place-self-center max-h-screen grid gap-6 outline outline-1 outline-[#151515] rounded-lg w-3/6 h-[80%] grid-rows-[1fr_auto_auto_1fr] grid-cols-2">
+      <div className="flex flex-col gap-2 w-fit col-span-2">
         <h1 className="text-2xl">Create an account</h1>
         <p className="text-primary">please entrer your details.</p>
       </div>

@@ -1,3 +1,5 @@
+import { User, Settings, LogOut } from "lucide-react";
+import React from "react";
 // Caractéristiques du site
 export const APP = {
   title: "Dot App",
@@ -38,28 +40,39 @@ export const NAVIGATION_BAR_ADMIN = [
 ];
 
 // Dropdawn du dashboard
-export const NAVIGATION_DROPDOWN_ADMIN = [
+interface NavigationDropDownItem {
+  label: string;
+  icon:  React.ElementType;
+  root: string;
+}
+export const NAVIGATION_DROPDOWN_ADMIN: NavigationDropDownItem[] = [
   {
     label: "profile",
+    icon: User,
+    root: "profile",
   },
   {
     label: "settings",
+    icon: Settings,
+    root: "settings",
   },
   {
     label: "log out",
+    icon: LogOut,
+    root: "logout",  // Ajout de 'root' pour cohérence
   },
 ];
 
 // Footer
-interface FooterItem {
-  socials: string | any;
+interface SocialLink {
+  socials: string;
   link: string;
 }
-interface FooterSection {
+interface FooterItem {
   label: string;
-  items: (string | FooterItem)[];
+  items: (string | SocialLink)[];
 }
-export const FOOTER: FooterSection[] = [
+export const FOOTER: FooterItem[] = [
   {
     // Colonne 2
     label: "service",

@@ -15,7 +15,11 @@ export const CTA: React.FC<CTAProps> = () => {
     case "loading":
       return <p>Loading...</p>;
     case "authenticated":
-      return <DropdownMenu onLogout={() => signOut()} />;
+      if(session.user.role !== "admin") {
+        return <DropdownMenu onLogout={() => signOut()} userName={session.user?.name} userEmail={session.user?.email} isAdmin={false}/>;
+      } else {
+        return <DropdownMenu onLogout={() => signOut()} userName={session.user?.name} userEmail={session.user?.email} isAdmin={true}/>;
+      }
     case "unauthenticated":
       return (
         <>
@@ -100,7 +104,7 @@ export const NavBar: React.FC<Props> = ({ logo, title, gap }) => {
     <header className="z-50 bg-background fixed border-b border-1 border-[#151515] top-0 w-full px-[10%] py-4 grid grid-cols-[1fr_auto_1fr] justify-between content-center max-h-16 mobileL:px-[2%] mobileL:justify-between mobileL:grid-cols-2">
       {/* côté gauche */}
       {logo ? (
-        <div className="flex items-center gap-1 h-full">
+        <div className="flex items-center gap-2 h-full">
           <img src={icon.src} alt="logo" className="h-[60px] aspect-square" />
           <span className="text-primary font-bold text-2xl">{title}</span>
         </div>

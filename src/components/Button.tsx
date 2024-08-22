@@ -59,7 +59,7 @@ const getVariantClasses = () => {
       case "faded":
         return `duration-300 text-[rgb(var(--color))] opacity-75`;
       case "bordered":
-        return `duration-300 text-[rgb(var(--color))] border border-[rgb(var(--color))] hover:bg-[rgb(var(--color),0.2)] hover:text-white`;
+        return `duration-300 bg-background text-[rgb(var(--color))] border border-2 border-[rgb(var(--color))] hover:bg-[rgb(var(--color),0.2)] hover:text-white`;
       case "light":
         return `duration-300 text-[rgb(var(--color))] hover:bg-[rgb(var(--color),0.2)]`;
       case "flat":

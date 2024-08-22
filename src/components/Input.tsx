@@ -1,10 +1,11 @@
 interface InputProps {
-  id: string;
+  id?: string;
   name: string;
   type: string;
   value?: any;
   onChange?: any;
   children: string;
+  addClassName?: string,
 }
 export const Input: React.FC<InputProps> = ({
   id,
@@ -13,6 +14,7 @@ export const Input: React.FC<InputProps> = ({
   value,
   onChange,
   children,
+  addClassName,
 }) => {
   return (
     <input
@@ -22,7 +24,7 @@ export const Input: React.FC<InputProps> = ({
       value={value}
       onChange={onChange}
       placeholder={children}
-      className="bg-background rounded-md outline outline-2 outline-[#151515] py-2 px-6"
+      className={`bg-background rounded-md outline outline-2 outline-[#151515] py-2 px-6 ${addClassName}`}
     />
   );
 };

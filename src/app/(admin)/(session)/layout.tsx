@@ -4,6 +4,7 @@ import {  authOptions } from '../../api/auth/[...nextauth]/route';
 import { getServerSession } from 'next-auth/next';
 import { APP, NAVIGATION_BAR_ADMIN } from '@/data';
 import NavBar from '@/components/NavBar';
+import React from 'react';
 
 export default async function AuthLayout({
     children, // will be a page or nested layout
@@ -16,11 +17,11 @@ export default async function AuthLayout({
     } else {
       return (
         <html>
-         <body>
+         <body className='min-h-screen h-screen grid grid-rows-1'>
           <NavBar title={APP.title}/>
-         <section className="w-full h-section grid place-items-center">
+         <React.Fragment>
            {children}
-         </section>
+         </React.Fragment>
          </body>
         </html>
        )
