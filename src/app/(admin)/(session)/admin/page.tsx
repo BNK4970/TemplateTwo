@@ -52,7 +52,10 @@ const AdminPage: React.FC = () => {
               <thead className="p-4">
                 <tr>
                   <th>ID</th>
-                  <th>Name</th>
+                  <th>Username</th>
+                  <th>Roles</th>
+                  <th>First name</th>
+                  <th>Last name</th>
                   <th>Email</th>
                 </tr>
               </thead>
@@ -60,7 +63,10 @@ const AdminPage: React.FC = () => {
                 {users.map((user) => (
                   <tr key={user.id} className="odd:bg-[rgb(var(--color-secondary),0.2)] p-4">
                     <td>{user.id}</td>
-                    <td>{user.name}</td>
+                    <td>{user.username}</td>
+                    <td>{user.role}</td>
+                    <td>{user.firstname}</td>
+                    <td>{user.lastname}</td>
                     <td>{user.email}</td>
                   </tr>
                 ))}

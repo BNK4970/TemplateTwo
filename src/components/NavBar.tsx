@@ -101,7 +101,7 @@ export const NavBar: React.FC<Props> = ({ logo, title, gap }) => {
   };
 
   return (
-    <header className="z-50 bg-background fixed border-b border-1 border-[#151515] top-0 w-full px-[10%] py-4 grid grid-cols-[1fr_auto_1fr] justify-between content-center max-h-16 mobileL:px-[2%] mobileL:justify-between mobileL:grid-cols-2">
+    <header className="z-50 bg-background fixed border-b border-1 border-line top-0 w-full px-[10%] py-4 grid grid-cols-[1fr_auto_1fr] justify-between content-center max-h-16 mobileL:px-[2%] mobileL:justify-between mobileL:grid-cols-2">
       {/* côté gauche */}
       {logo ? (
         <div className="flex items-center gap-2 h-full">

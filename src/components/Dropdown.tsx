@@ -49,15 +49,17 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ userEmail, userName, isAdmi
       >
         {menuItems.map((item, index) => (
           <React.Fragment key={index}>
-            {index === NAVIGATION_DROPDOWN_ADMIN.length && <div className="h-[1px] w-full bg-line rounded-full"></div>}
             {item.root === "logout" ? (
-              <li
+              <>
+              <div className="h-[1px] w-full bg-line rounded-full"></div>
+                <li
                 onClick={() => signOut()}
                 className="capitalize text-danger hover:bg-[rgb(var(--color-danger),0.1)] duration-200 rounded-md px-3 py-1 flex items-center gap-2"
               >
                 <span>{<item.icon className="size-4" />}</span>
                 <p>{item.label}</p>
               </li>
+              </>
             ) : (
               <Link
                 href={`/dashboard/${item.root}`}
